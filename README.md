@@ -54,28 +54,37 @@ The design was simulated and verified using Cadence Virtuoso, meeting or exceedi
 
 ## Result Imagery
 
-* **Complete Opamp Schematic:** <img width="3402" height="988" alt="full_schematic" src="https://github.com/user-attachments/assets/31f02581-f2b6-4e7a-80b2-cb6348fdab20" />
+* **Complete Opamp Schematic:**
+<img width="3402" height="988" alt="full_schematic" src="https://github.com/user-attachments/assets/31f02581-f2b6-4e7a-80b2-cb6348fdab20" />
 &nbsp;
 
-* **CMFB1 OTA Circuit:** <img width="1037" height="645" alt="cmfb1" src="https://github.com/user-attachments/assets/03712262-d5c6-46f1-a770-aca72ba82640" />
+* **CMFB1 OTA Circuit:**
+<img width="1037" height="645" alt="cmfb1" src="https://github.com/user-attachments/assets/03712262-d5c6-46f1-a770-aca72ba82640" />
 &nbsp;
 
-* **CMFB2 OTA Circuit:** <img width="988" height="648" alt="cmfb2" src="https://github.com/user-attachments/assets/c987445c-503b-4f97-a222-63762d412a12" />
+* **CMFB2 OTA Circuit:**
+<img width="988" height="648" alt="cmfb2" src="https://github.com/user-attachments/assets/c987445c-503b-4f97-a222-63762d412a12" />
 &nbsp;
 
-* **Differential Loop Response:** <img width="1910" height="654" alt="differential_loop_gain_phase" src="https://github.com/user-attachments/assets/c18fa04a-b1a5-46a2-92f1-5cc1fc69ae59" />
+* **Differential Loop Response:**
+<img width="1910" height="654" alt="differential_loop_gain_phase" src="https://github.com/user-attachments/assets/c18fa04a-b1a5-46a2-92f1-5cc1fc69ae59" />
 &nbsp;
 
-* **Closed-Loop Response:** <img width="1910" height="654" alt="closed_loop_gain_phase" src="https://github.com/user-attachments/assets/8210b9e1-845f-41a5-bbc1-1cb4f24d8596" />
+* **Closed-Loop Response:**
+<img width="1910" height="654" alt="closed_loop_gain_phase" src="https://github.com/user-attachments/assets/8210b9e1-845f-41a5-bbc1-1cb4f24d8596" />
 &nbsp;
 
-* **CMFB1 Loop Gain:** <img width="1910" height="654" alt="cmfb1_nOTA_loop_gain_phase" src="https://github.com/user-attachments/assets/7e8604a9-d953-4bba-9d4b-6dc9bfe76918" />
+* **CMFB1 Loop Gain:**
+<img width="1910" height="654" alt="cmfb1_nOTA_loop_gain_phase" src="https://github.com/user-attachments/assets/7e8604a9-d953-4bba-9d4b-6dc9bfe76918" />
 &nbsp;
 
-* **CMFB2 Loop Gain:** <img width="1910" height="654" alt="cmfb2_pOTA_loop_gain_phase" src="https://github.com/user-attachments/assets/929f0aa8-aee4-40c7-9744-5ba4ab900115" />
+* **CMFB2 Loop Gain:**
+<img width="1910" height="654" alt="cmfb2_pOTA_loop_gain_phase" src="https://github.com/user-attachments/assets/929f0aa8-aee4-40c7-9744-5ba4ab900115" />
 &nbsp;
 
-* **Differential Step Response:** <img width="1910" height="654" alt="differential_step_response" src="https://github.com/user-attachments/assets/2168f46a-7f3d-48eb-9729-bdccdf38f885" />
+* **Differential Step Response:**
+<img width="1910" height="654" alt="differential_step_response" src="https://github.com/user-attachments/assets/2168f46a-7f3d-48eb-9729-bdccdf38f885" />
 &nbsp;
 
-* **Common-Mode Step Response:** <img width="1910" height="654" alt="cm_step_response" src="https://github.com/user-attachments/assets/86f44df1-5454-4da4-9b7d-88c347530353" />
+* **Common-Mode Step Response:**
+<img width="1910" height="654" alt="cm_step_response" src="https://github.com/user-attachments/assets/86f44df1-5454-4da4-9b7d-88c347530353" />
