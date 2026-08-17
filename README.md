@@ -1,20 +1,21 @@
-# Fully-Differential-2-Stage-Miller-Compensated-OTA-in-gpdk180
+# Fully-Differential 2-Stage Miller Compensated OTA in gpdk180
+
 Cadence Virtuoso implementation of a Fully-Differential Two-Stage Miller Compensated OTA featuring dual CMFB loops, achieving >60dB DC gain and a 5.1MHz closed-loop bandwidth.
 
 ## Project Overview
 This repository contains the Cadence Virtuoso implementation and design 
 documentation for a Fully-Differential Two-Stage Operational Transconductance 
-Amplifier (OTA) with Miller Compensation[cite: 29, 30]. Developed as part of 
+Amplifier (OTA) with Miller Compensation. Developed as part of 
 the EE610 Analog IC Design coursework, the opamp is configured as an inverting 
-amplifier with a closed-loop gain of -2[cite: 29, 30]. 
+amplifier with a closed-loop gain of -2. 
 
 ## Design Specifications
-* **Closed-loop gain**: -2 (using $R_1 = 100k\Omega$, $R_2 = 200k\Omega$)[cite: 29, 30].
-* **Load configuration**: $R_L = 10k\Omega$ parallel with $C_L = 2pF$[cite: 29, 30].
-* **DC loop gain**: $\geq 60dB$[cite: 30].
-* **Closed-loop 3-dB bandwidth**: $\geq 1MHz$ with no magnitude peaking[cite: 30].
-* **CMFB loops**: Phase margin $\geq 60^\circ$ and Unity Gain Bandwidth (UGB) $\geq 1/4$ of the differential UGB[cite: 30].
-* **Second stage output common-mode**: Set strictly to $V_{DD}/2$[cite: 30].
+* **Closed-loop gain**: -2 (using $R_1 = 100k\Omega$, $R_2 = 200k\Omega$).
+* **Load configuration**: $R_L = 10k\Omega$ parallel with $C_L = 2pF$.
+* **DC loop gain**: $\geq 60dB$.
+* **Closed-loop 3-dB bandwidth**: $\geq 1MHz$ with no magnitude peaking.
+* **CMFB loops**: Phase margin $\geq 60^\circ$ and Unity Gain Bandwidth (UGB) $\geq 1/4$ of the differential UGB.
+* **Second stage output common-mode**: Set strictly to $V_{DD}/2$.
 
 ---
 
@@ -22,29 +23,29 @@ amplifier with a closed-loop gain of -2[cite: 29, 30].
 
 ### 1. Core Amplifier Stages
 * **First Stage**: An nMOS differential pair (NM10, NM11) utilizing pMOS active 
-loads (PM9, PM10) to achieve an initial gain of approximately 50 dB[cite: 29].
+loads (PM9, PM10) to achieve an initial gain of approximately 50 dB.
 * **Second Stage**: A pMOS differential pair (PM19, PM20) with nMOS active 
-loads (NM20, NM21) designed to provide at least 20 dB of additional gain[cite: 29].
+loads (NM20, NM21) designed to provide at least 20 dB of additional gain.
 
 ### 2. Common-Mode Feedback (CMFB)
 * **CMFB1**: An nMOS-input 5-transistor OTA controls the common-mode voltage 
-of the first stage[cite: 29].
+of the first stage.
 * **CMFB2**: A pMOS-input 5-transistor OTA manages the second stage, enforcing 
-the $V_{DD}/2$ output common-mode requirement[cite: 29, 30].
+the $V_{DD}/2$ output common-mode requirement.
 
 ### 3. Biasing and Compensation
 * **Biasing**: Current mirrors derive all necessary bias currents and voltages 
 from a single $1\mu A$ reference source to maintain saturation across all 
-devices[cite: 29, 30].
+devices.
 * **Compensation**: Miller compensation with series nulling resistors is 
 implemented across the differential stage and both CMFB loops to ensure 
-stability[cite: 29].
+stability.
 
 ---
 
 ## Component Sizing & Design Parameters
 The following table summarizes the key transistor sizing and compensation 
-values achieved during the design phase[cite: 29]:
+values achieved during the design phase:
 
 | Parameter | First Stage | Second Stage | Main Diff. Loop | CMFB1 | CMFB2 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -57,22 +58,22 @@ values achieved during the design phase[cite: 29]:
 
 ## Simulation Results
 The design was simulated using Cadence Virtuoso, meeting or exceeding all 
-required specifications[cite: 29, 30].
+required specifications.
 
 * **DC Operating Point**: The first stage achieved a simulated $g_m$ of 
 $65.95 \mu S$ at $5.07 \mu A$, while the second stage hit $2.77 mS$ at 
-$727 \mu A$[cite: 29].
+$727 \mu A$.
 * **Differential Loop Gain**: Achieved a Unity Gain Frequency (UGF) of 3.42 MHz 
-with a Phase Margin of $68.42^\circ$[cite: 29].
+with a Phase Margin of $68.42^\circ$.
 * **Closed-Loop Frequency Response**: Demonstrated a -3dB Bandwidth of 5.11 MHz 
-with absolutely no peaking observed[cite: 29].
+with absolutely no peaking observed.
 * **CMFB1 Performance**: Reached a UGF of 7.13 MHz and a Phase Margin of 
-$67.97^\circ$[cite: 29].
+$67.97^\circ$.
 * **CMFB2 Performance**: Reached a UGF of 11.86 MHz and a Phase Margin of 
-$64.14^\circ$[cite: 29].
+$64.14^\circ$.
 * **Transient Response**: A 1mV differential step input yielded a clean 
 amplified output, while a 1mV common-mode step produced negligible output 
-change, confirming excellent common-mode rejection ($A_{CM} \approx 0$)[cite: 29].
+change, confirming excellent common-mode rejection ($A_{CM} \approx 0$).
 
 ---
 
