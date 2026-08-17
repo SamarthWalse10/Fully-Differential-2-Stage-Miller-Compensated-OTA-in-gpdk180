@@ -24,7 +24,7 @@ The system architecture is broken down into the core high-gain amplifier stages,
 
 ### 1. Core Amplifier Stages
 * **First Stage (High Gain)**: Designed using a high-gain nMOS differential pair with pMOS active loads. 
-* **Second Stage (High Swing)**: Utilizes a heavily sized pMOS differential pair with nMOS active loads to provide additional gain and cleanly drive the resistive/capacitive load.
+* **Second Stage (High Swing)**: Utilizes heavily sized pMOS common-source amplifiers with nMOS active loads to provide additional gain and cleanly drive the resistive/capacitive load.
 
 ### 2. Common-Mode Feedback (CMFB) Network
 Because fully differential amplifiers cannot naturally establish their own output common-mode voltage, two continuous-time CMFB loops are implemented:
