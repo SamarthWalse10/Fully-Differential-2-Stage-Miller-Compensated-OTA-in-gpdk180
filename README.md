@@ -27,7 +27,7 @@ The system architecture is broken down into the core high-gain amplifier stages,
 * **Second Stage (High Swing)**: Utilizes heavily sized pMOS common-source amplifiers with nMOS active loads to provide additional gain and cleanly drive the resistive/capacitive load.
 
 ### 2. Common-Mode Feedback (CMFB) Network
-Because fully differential amplifiers cannot naturally establish their own output common-mode voltage, two continuous-time CMFB loops are implemented:
+Because fully differential amplifiers cannot naturally establish their own output common-mode voltage, two CMFB loops are implemented:
 * **CMFB1 (First Stage)**: An nMOS-input 5-transistor OTA topology that senses and stabilizes the first-stage output common-mode.
 * **CMFB2 (Second Stage)**: A pMOS-input 5-transistor OTA topology that strictly enforces the $V_{DD}/2$ common-mode requirement at the final output nodes.
 
@@ -38,12 +38,12 @@ Because fully differential amplifiers cannot naturally establish their own outpu
 ---
 
 ## 📘 Detailed Mathematical Calculations & Sizing
-> For in-depth theoretical calculations, transistor sizing ($W/L$ ratios, multipliers), transconductance ($g_m$) derivations, and the complete mathematical design methodology, **please refer to the attached Project Report PDF (`EE610_Project_2_Report.pdf`) included in this repository.**
+> For in-depth theoretical calculations, transistor sizing ($W/L$ ratios, multipliers), transconductance ($g_m$) derivations, and the complete mathematical design methodology, **please refer to the attached Project Report PDF (`EE610_Project_2_Report_251040092.pdf`) included in this repository.**
 
 ---
 
 ## Simulation Results (Virtuoso ADE L)
-The design was rigorously simulated and verified using Cadence Virtuoso, meeting or exceeding all required specifications under the loaded condition ($R_L=10k\Omega || C_L=2pF$).
+The design was simulated and verified using Cadence Virtuoso, meeting or exceeding all required specifications under the loaded condition ($R_L=10k\Omega || C_L=2pF$).
 
 * **Differential Loop Gain**: Achieved a Unity Gain Frequency (UGF) of 3.42 MHz with a highly stable Phase Margin of $68.42^\circ$.
 * **Closed-Loop Frequency Response**: Demonstrated a -3dB Bandwidth of 5.11 MHz with absolutely no magnitude peaking observed.
@@ -53,17 +53,30 @@ The design was rigorously simulated and verified using Cadence Virtuoso, meeting
 ---
 
 ## Result Imagery
-*(To display the images below, upload the screenshots from your report into an `images` folder within this repository).*
 
 * **Complete Opamp Schematic:**
-  `![Opamp Schematic](images/opamp_schematic.png)`
+<img width="3402" height="988" alt="full_schematic" src="https://github.com/user-attachments/assets/31f02581-f2b6-4e7a-80b2-cb6348fdab20" />
+
 * **CMFB OTA Circuits:**
-  `![CMFB Circuits](images/cmfb_circuits.png)`
+<img width="1037" height="645" alt="cmfb1" src="https://github.com/user-attachments/assets/03712262-d5c6-46f1-a770-aca72ba82640" />
+
+<img width="988" height="648" alt="cmfb2" src="https://github.com/user-attachments/assets/c987445c-503b-4f97-a222-63762d412a12" />
+
 * **Differential Loop Response:**
-  `![Differential Loop](images/diff_loop.png)`
+<img width="1910" height="654" alt="differential_loop_gain_phase" src="https://github.com/user-attachments/assets/c18fa04a-b1a5-46a2-92f1-5cc1fc69ae59" />
+
 * **Closed-Loop Response:**
-  `![Closed Loop Response](images/closed_loop.png)`
+<img width="1910" height="654" alt="closed_loop_gain_phase" src="https://github.com/user-attachments/assets/8210b9e1-845f-41a5-bbc1-1cb4f24d8596" />
+
 * **CMFB Loop Gains:**
-  `![CMFB Loops](images/cmfb_loops.png)`
+<img width="1910" height="654" alt="cmfb1_nOTA_loop_gain_phase" src="https://github.com/user-attachments/assets/7e8604a9-d953-4bba-9d4b-6dc9bfe76918" />
+
+<img width="1910" height="654" alt="cmfb2_pOTA_loop_gain_phase" src="https://github.com/user-attachments/assets/929f0aa8-aee4-40c7-9744-5ba4ab900115" />
+
 * **Step Responses:**
-  `![Step Responses](images/step_responses.png)`
+<img width="1910" height="654" alt="differential_step_response" src="https://github.com/user-attachments/assets/2168f46a-7f3d-48eb-9729-bdccdf38f885" />
+
+<img width="1910" height="654" alt="cm_step_response" src="https://github.com/user-attachments/assets/86f44df1-5454-4da4-9b7d-88c347530353" />
+
+
+
