@@ -3,7 +3,7 @@
 Cadence Virtuoso implementation of a Fully-Differential Two-Stage Miller Compensated OTA featuring dual CMFB loops, achieving >60dB DC gain and a 5.1MHz closed-loop bandwidth.
 
 ## Project Overview
-This repository contains the Cadence Virtuoso implementation and detailed design documentation for a Fully-Differential Two-Stage Operational Transconductance Amplifier (OTA) utilizing Miller Compensation. Developed as part of the EE610 Analog IC Design coursework at the **Indian Institute of Technology (IIT) Kanpur**, the opamp is engineered in the gpdk180 (180nm) process. It is configured and simulated as an inverting amplifier with a closed-loop gain of -2 to verify stability and transient response under specific loading conditions.
+This repository contains the Cadence Virtuoso implementation and detailed design documentation for a Fully-Differential Two-Stage Operational Transconductance Amplifier (OTA) utilizing Miller Compensation. Developed as part of the EE610 Analog IC Design coursework at IIT Kanpur, the opamp is engineered in the gpdk180 (180nm) process. It is configured and simulated as an inverting amplifier with a closed-loop gain of -2 to verify stability and transient response under specific loading conditions.
 
 ## Design Specifications
 The circuit was strictly designed to meet the following parameters:
