@@ -88,3 +88,4 @@ The design was simulated and verified using Cadence Virtuoso, meeting or exceedi
 
 * **Common-Mode Step Response:**
 <img width="1910" height="654" alt="cm_step_response" src="https://github.com/user-attachments/assets/86f44df1-5454-4da4-9b7d-88c347530353" />
+
